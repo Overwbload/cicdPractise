@@ -21,7 +21,7 @@ phases:
       - echo Build completed on `date`
       - ls -l ./dist/shop/
   artifacts:
-    filse:
+    files:
       - dist/shop/*
       - dist/shop/assets/*
       # - appspec.yml
