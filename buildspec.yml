@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+  pre_build:
+    commands:
+      - echo Nothing to di in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      # 建立依賴庫
+      - npm install
+      - echo npm run  build completed on `date`
+      # 編譯
+      - npm run build
+      - echo npm run build completed on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - ls -l ./dist/shop/
+  artifacts:
+    filse:
+      - dist/shop/*
+      - dist/shop/assets/*
+      # - appspec.yml
